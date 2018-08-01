@@ -39,8 +39,6 @@ class EditVC: UIViewController, UITextViewDelegate, UICollectionViewDelegate, UI
     
     override func viewWillAppear(_ animated: Bool) {
         editImagesNames = (note?.images)! + imageManager.imagesNames
-        //editImagesNames?.append(contentsOf: imageManager.imagesNames)
-        //editImagesNames = (note?.images)! && imageManager.imagesNames
         collectionOfImages.reloadData()
     }
 
@@ -120,34 +118,6 @@ class EditVC: UIViewController, UITextViewDelegate, UICollectionViewDelegate, UI
         // Show alert window.
         self.present(alert, animated: true, completion: nil)
     }
-    
-    /*func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let collectionCell = collectionOfImages.cellForItem(at: indexPath) as! ImageViewCell
-        
-        let imageName = editImagesNames![indexPath.row]
-        let indexEditImagesNames = editImagesNames?.index(of: imageName)
-        let indexImageManager = imageManager.imagesNames.index(of: imageName)
-        
-        if indexImageManager == nil {
-            // Remove images.
-            editImagesNames?.remove(at: indexEditImagesNames!)
-            imageManager.deleteFile(imageName: imageName)
-        } else {
-            // Remove temp images.
-            imageManager.imagesNames.remove(at: indexImageManager!)
-            imageManager.imagesURL.remove(at: indexImageManager!)
-            imageManager.imagesJPG.remove(at: indexImageManager!)
-            editImagesNames?.remove(at: indexEditImagesNames!)
-        }
-        
-        // Remove image from Documents Directory.
-        imageManager.deleteFile(imageName: imageName)
-        
-        // Save.
-        data.editNote(note: note, titleView: titleEdit, detailsView: detailsEdit, images: editImagesNames!)
-        
-        collectionOfImages.reloadData()
-    }*/
     
     // MARK: Actions
     
