@@ -121,36 +121,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         newVC.image = image
         
         self.present(newVC, animated: true, completion: nil)
-        
-        /*if let imageVC = UIViewController() as? ImageVC {
-            imageVC.image = image
-            present(imageVC, animated: true, completion: nil)
-            //navigationController?.pushViewController(imageVC, animated: true)
-        }*/
     }
-    
-    /*
-    func imageTapped(image: UIImage) {
-        let newImageView = UIImageView(frame: UIScreen.main.bounds)
-        newImageView.image = image
-        newImageView.backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 0.9)
-        newImageView.contentMode = .scaleToFill
-        newImageView.isUserInteractionEnabled = true
-        view.addSubview(newImageView)
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        
-        let aSelector: Selector = #selector(dismissFullScreenImage(_:))
-        let tap = UITapGestureRecognizer(target: self, action: aSelector)
-        tap.delegate = self
-        
-        newImageView.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissFullScreenImage(_ sender: UITapGestureRecognizer) {
-        sender.view?.removeFromSuperview()
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        print("Fullscreen image dismissed")
-    }*/
     
     // Passing data between View Controllers.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
