@@ -13,7 +13,6 @@ public class Images {
     
     //MARK: Properties
     
-    //var imagesURLs: [URL] = []
     var imagesJPGs: [UIImage] = []
     var imageNames: [String] = []
 }
