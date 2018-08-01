@@ -27,7 +27,7 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(reverse(text: "hello"))
+        
         getCurrentNote()
         
         collectionOfImages.delegate = self
@@ -121,11 +121,6 @@ class DetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         newVC.image = image
         
         self.present(newVC, animated: true, completion: nil)
-    }
-    
-    // for git testing
-    func reverse(text: String) -> String {
-        return String(text.reversed())
     }
     
     // Passing data between View Controllers.
