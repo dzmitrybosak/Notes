@@ -12,7 +12,6 @@ import UIKit
 public class Images {
     
     //MARK: Properties
-    
     var imagesJPGs: [UIImage] = []
     var imageNames: [String] = []
 }
